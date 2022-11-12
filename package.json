@@ -1,0 +1,25 @@
+{
+  "name": "mern-pos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node":"16.15.0",
+    "npm":"8.3.0"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix point_of_sale",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix point_of_sale",
+    "dev": "concurrently \"npm run server\" \"npm run point_of_sale\"",
+    "start": "node server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix point_of_sale && npm run build --prefix point_of_sale"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5",
+    "nodemon": "^2.0.16"
+  }
+}
